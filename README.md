@@ -1,7 +1,5 @@
 # Duomenų apdorojimas
 
-![version][version-badge]
-
 ## Programos tikslas
 
 **Programa skaičiuoja galutinį studento balą ir atspausdinami visi duomenys:
@@ -13,7 +11,7 @@
 
 ## Versijų istorija
 
-[v0.1](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.1)
+###[v0.1](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.1) - 2018-02-22
 
 **Pridėta**
 - Pirminė versija.
