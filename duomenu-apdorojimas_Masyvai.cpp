@@ -9,8 +9,9 @@ int randPazymys();
 
 int main() {
   std::string vardas, pavarde;
-  int n, egz, ivestis, ifRandom;
+  int egz, ivestis, ifRandom;
   double vidurkis = 0;
+  int n = 0;
   double mediana;
   std::cout << "Iveskite Varda: ";
   std::cin >> vardas;
@@ -23,16 +24,31 @@ int main() {
     std::cin >> egz;
   } else {
     egz = randPazymys();
+    std::cout << "Iveskite pazymiu skaiciu (n): ";
+    std::cin >> n;
   }
-  std::cout << "Iveskite pazymiu skaiciu (n): ";
-  std::cin >> n;
-  int *namu_darbai = new int [n];
+  int capacity = 1;
+  int *namu_darbai = new int [capacity];
   if(ifRandom == 0) {
-    for (int i = 0; i < n; i++) {
-      std::cin >> namu_darbai[i];
+    int input;
+    std::cout << "Iveskite pazymius, jei norite nutraukti iveskite -1: ";
+    while (std::cin >> input) {
+      if (input < 0) break;
+      if(capacity > n) {
+        namu_darbai[n] = input;
+      }
+      else {
+        capacity *= n;
+        auto *placeholder = new int[capacity];
+        for (int i = 0; i < n; i++)
+          placeholder[i] = namu_darbai[i];
+        namu_darbai = placeholder;
+        namu_darbai[n] = input;
+      }
+      n++;
     }
   } else {
-    for (int i = 0; i < n; i++)
+  for (int i = 0; i < n; i++)
       namu_darbai[i] = randPazymys();
   }
   std::cout << "Pasirinkite skaiciavimo buda (Mediana - 0, Vidurkis - 1): ";
