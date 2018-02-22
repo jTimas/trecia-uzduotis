@@ -3,11 +3,21 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <random>
+
+int modernRand(int n) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(0, n);
+    return dis(gen);
+}
 
 int main() {
+  for(int i = 0; i < 15; i++)
+    std::cout << modernRand(10) << std::endl;
   std::vector<int> namu_darbai;
   std::string vardas, pavarde;
-  int n, egz, ivestis;
+  int n, egz, ivestis, ifRandom;
   double vidurkis = 0;
   double mediana;
   std::cout << "Iveskite Varda: ";
@@ -18,13 +28,20 @@ int main() {
   std::cin >> egz;
   std::cout << "Iveskite pazymiu skaiciu (n): ";
   std::cin >> n;
+  std::cout << "Pasirinkite pazymiu rezultatu ivedima (Ivesti pazymius - 0, Generuoti atsitiktinai - 1): ";
+  std::cin >> ifRandom;
+  if(ifRandom == 0) {
+    for (int i = 0; i < n; i++) {
+      int input;
+      std::cin >> input;
+      namu_darbai.push_back(input);
+    }
+  } else {
+    for (int i = 0; i < n; i++)
+      namu_darbai.push_back(modernRand(10));
+  }
   std::cout << "Pasirinkite skaiciavimo buda (Mediana - 0, Vidurkis - 1): ";
   std::cin >> ivestis;
-  for (int i = 0; i < n; i++) {
-    int input;
-    std::cin >> input;
-    namu_darbai.push_back(input);
-  }
   std::cout << "Studento Vardas Pavarde: " << vardas << " " << pavarde << std::endl;
   std::sort(namu_darbai.begin(), namu_darbai.end());
   std::cout << "Studento namu darbu pazymiai: ";
