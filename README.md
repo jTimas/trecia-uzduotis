@@ -2,7 +2,7 @@
 
 ## Programos tikslas
 
-**Programa skaičiuoja galutinį studento balą ir atspausdinami visi duomenys:
+**Programa skaičiuoja galutinį studento balą ir atspausdinami visi duomenys:**
 - Vardas, Pavardė.
 - Namų darbų ir egzamino rezultatai.
 - Galutinis balas.
@@ -11,7 +11,7 @@
 
 ## Versijų istorija
 
-###[v0.1](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.1) - 2018-02-22
+### [v0.1](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.1) - 2018-02-22
 
 **Pridėta**
 - Pirminė versija.
