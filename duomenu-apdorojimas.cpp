@@ -10,7 +10,7 @@ int randPazymys();
 int main() {
   std::vector<int> namu_darbai;
   std::string vardas, pavarde;
-  int n, egz, ivestis, ifRandom;
+  int egz, ivestis, ifRandom;
   double vidurkis = 0;
   double mediana;
   std::cout << "Iveskite Varda: ";
@@ -25,15 +25,18 @@ int main() {
   } else {
     egz = randPazymys();
   }
-  std::cout << "Iveskite pazymiu skaiciu (n): ";
-  std::cin >> n;
   if(ifRandom == 0) {
-    for (int i = 0; i < n; i++) {
-      int input;
-      std::cin >> input;
+    std::cout << "Iveskite pazymius, jei norite nutraukti ivedima irasykite -1: ";
+    int input;
+    while (std::cin >> input) {
+      if(input < 0) break;
       namu_darbai.push_back(input);
     }
-  } else {
+  }
+  else {
+    int n;
+    std::cout << "Iveskite pazymiu skaiciu n: ";
+    std::cin >> n;
     for (int i = 0; i < n; i++)
       namu_darbai.push_back(randPazymys());
   }
@@ -51,7 +54,7 @@ int main() {
     mediana = (namu_darbai[namu_darbai.size() / 2] + namu_darbai[(namu_darbai.size() / 2) - 1]) / 2.0;
   else
     mediana = namu_darbai[(namu_darbai.size() / 2)];
-  vidurkis = (double) vidurkis / n;
+  vidurkis = (double) vidurkis / namu_darbai.size();
   std::cout << "Egzamino rezultatai: " << egz << std::endl;
   std::cout << std::setprecision(2) << std::fixed << "Galutinis balas: " << 0.4 * (ivestis == 0 ? mediana : vidurkis) + 0.6 * egz << std::endl;
   return 0;
