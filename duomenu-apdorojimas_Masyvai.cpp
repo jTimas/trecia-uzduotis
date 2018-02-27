@@ -38,7 +38,7 @@ int main() {
         namu_darbai[n] = input;
       }
       else {
-        capacity *= n;
+        capacity *= 2;
         auto *placeholder = new int[capacity];
         for (int i = 0; i < n; i++)
           placeholder[i] = namu_darbai[i];

@@ -7,6 +7,12 @@
 #include <random>
 int randPazymys();
 
+struct Studentas {
+  std::string vardas, pavarde;
+  int vidurkis, mediana;
+};
+
+bool is_younger(const Studentas& x, const Studentas& y) { return x.vardas < y.vardas; }
 int main() {
   std::vector<int> namu_darbai;
   std::string vardas, pavarde;
@@ -64,6 +70,7 @@ int main() {
   } else {
     std::ifstream fin ("kursiokai.txt");
     int input;
+    std::vector<Studentas> stud;
     getline(fin, pavarde);
     std::cout << std::left << std::setw(15) << "Pavarde" << std::setw(15) << "Vardas" << std::setw(20) << "Galutinis-vidurkis" << std::setw(20) << "Galutinis-mediana" << std::endl;
     do {
@@ -82,9 +89,13 @@ int main() {
       else
         mediana = namu_darbai[(namu_darbai.size() / 2)];
       vidurkis = (double) vidurkis / namu_darbai.size();
-      std::cout << std::left << std::setprecision(2) << std::fixed << std::setw(15) << pavarde << std::setw(15) << vardas << std::setw(20) << vidurkis << std::setw(20) << mediana << std::endl;
+      stud.push_back({vardas, pavarde, vidurkis, mediana});
     } while(!fin.eof());
     fin.close();
+    std::sort(stud.begin(), stud.end(), is_younger);
+    for(auto const& value: stud) {
+      std::cout << std::left << std::setprecision(2) << std::fixed << std::setw(15) << value.pavarde << std::setw(15) << value.vardas << std::setw(20) << value.vidurkis << std::setw(20) << value.mediana << std::endl; 
+    }
   }
   return 0;
 }
