@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <random>
 #include "includes/studentas.h"
+#include "includes/studentasIsFailo.h"
 #include "includes/randPazymys.cpp"
 #include "includes/pazymiuIvedimas.cpp"
 #include "includes/duomenysIsFailo.cpp"

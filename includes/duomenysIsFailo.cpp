@@ -1,4 +1,4 @@
-bool pagalVarda(const Studentas& x, const Studentas& y) { return x.vardas < y.vardas; }
+bool pagalVarda(const StudentasF& x, const StudentasF& y) { return x.vardas < y.vardas; }
 
 void duomenysIsFailo() {
   std::vector<int> namu_darbai;
@@ -8,10 +8,10 @@ void duomenysIsFailo() {
   double mediana;
   std::ifstream fin;
   try {  // išimtys yra apdorojamos žemiau
-    fin.open ("kursiokai.txst", std::ios::in | std::ios::binary);
+    fin.open ("kursiokai.txt", std::ios::in | std::ios::binary);
     if( !fin ) throw std::ios::failure( "Error opening file!");
     int input;
-    std::vector<Studentas> stud;
+    std::vector<StudentasF> stud;
     getline(fin, pavarde);
     std::cout << std::left << std::setw(15) << "Pavarde" << std::setw(15) << "Vardas" << std::setw(20) << "Galutinis-vidurkis" << std::setw(20) << "Galutinis-mediana" << std::endl;
     do {
@@ -25,12 +25,17 @@ void duomenysIsFailo() {
         vidurkis += input;
       }
       fin >> egz;
+      std::sort(namu_darbai.begin(), namu_darbai.end());
       if (namu_darbai.size() % 2 == 0)
         mediana = (namu_darbai[namu_darbai.size() / 2] + namu_darbai[(namu_darbai.size()  / 2) - 1]) / 2.0;
       else
         mediana = namu_darbai[(namu_darbai.size() / 2)];
       vidurkis = (double) vidurkis / namu_darbai.size();
+      vidurkis = 0.4 * vidurkis + 0.6 * egz;
+      mediana = 0.4 * mediana + 0.6 * egz;
       stud.push_back({vardas, pavarde, vidurkis, mediana});
+      namu_darbai.clear();
+      vidurkis = 0;
     } while(!fin.eof());
     fin.close();
     std::sort(stud.begin(), stud.end(), pagalVarda);

@@ -4,10 +4,11 @@ void ivedimas() {
   int egz, ivestis, ifRandom;
   double vidurkis = 0;
   double mediana;
+  Studentas student;
   std::cout << "Iveskite Varda: ";
-  std::cin >> vardas;
+  std::cin >> student.vardas;
   std::cout << "Iveskite Pavarde: ";
-  std::cin >> pavarde;
+  std::cin >> student.pavarde;
   std::cout << "Pasirinkite pazymiu rezultatu ivedima (Ivesti pazymius - 0, Generuoti atsitiktinai - 1): ";
   std::cin >> ifRandom;
   if(ifRandom == 0) {
@@ -33,7 +34,7 @@ void ivedimas() {
   }
   std::cout << "Pasirinkite skaiciavimo buda (Mediana - 0, Vidurkis - 1): ";
   std::cin >> ivestis;
-  std::cout << "Studento Vardas Pavarde: " << vardas << " " << pavarde << std::endl;
+  std::cout << "Studento Vardas Pavarde: " << student.vardas << " " << pavarde << std::endl;
   std::sort(namu_darbai.begin(), namu_darbai.end());
   std::cout << "Studento namu darbu pazymiai: ";
   for(auto const& value: namu_darbai) {
