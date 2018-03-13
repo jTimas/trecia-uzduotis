@@ -9,6 +9,7 @@
 #include "includes/studentasIsFailo.h"
 #include "includes/randPazymys.cpp"
 #include "includes/pazymiuIvedimas.cpp"
+#include "includes/failuGeneravimas.cpp"
 #include "includes/duomenysIsFailo.cpp"
 
 int main() {
