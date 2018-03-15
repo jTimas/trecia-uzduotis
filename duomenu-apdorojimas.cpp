@@ -5,6 +5,8 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <deque>
+#include <list>
 #include "includes/studentas.h"
 #include "includes/studentasIsFailo.h"
 #include "includes/randPazymys.cpp"
@@ -24,7 +26,9 @@ int main() {
   if(!isFailo) {
     ivedimas();
   } else {
-    duomenysIsFailo();
+    duomenysIsFailoVector();
+    duomenysIsFailoList();
+    duomenysIsFailoDeque();
   }
   return 0;
 }
