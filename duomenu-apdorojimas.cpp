@@ -33,8 +33,10 @@ int main() {
     duomenysIsFailoVector2Strategija();
     duomenysIsFailoList();
     duomenysIsFailoList1Strategija();
+    duomenysIsFailoList2Strategija();
     duomenysIsFailoDeque();
     duomenysIsFailoDeque1Strategija();
+    duomenysIsFailoDeque2Strategija();
   }
   return 0;
 }
