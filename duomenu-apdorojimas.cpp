@@ -3,7 +3,9 @@
 #include <iomanip>
 #include <string>
 #include <vector>
+#include <chrono>
 #include <algorithm>
+#include <iterator>
 #include <random>
 #include <deque>
 #include <list>
@@ -27,6 +29,8 @@ int main() {
     ivedimas();
   } else {
     duomenysIsFailoVector();
+    duomenysIsFailoVector1Strategija();
+    duomenysIsFailoVector2Strategija();
     duomenysIsFailoList();
     duomenysIsFailoDeque();
   }
