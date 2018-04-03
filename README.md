@@ -11,10 +11,68 @@
 
 ## Versijų istorija
 
+###  [v0.4](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.4) - 2018-03-13
+
+**Pridėta:**
+- Pridėtas failų generavimas su `10, 100, 1000, 10000, 100000` įrašais.
+- Studentų rūšiavimas į dvi kategorijas (Vargšiukai < 5.0 galutinis balas, Kietiakai >= 5.0 galutinis balas).
+- Laiko matavimas su visais keturiais failais.
+
+---
+
+###  [v0.3](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.3) - 2018-03-01
+
+**Pridėta:**
+- Pradėtos naudoti struktūros.
+- Funkcijos perkeltos į `.cpp`.
+- Struktūros ir duomenų tipai perkelti į headerius `.h`.
+- Pradėtas naudotis išimčių valdymas (angl. *Exception Handling*)
+
+---
+
+### [v0.2](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.2) - 2018-02-27
+
+**Pridėta:**
+- Skaitymas iš failo.
+- Outputas įrašomas į failą.
+- Rūšiavimas pagal vardus ir pavardes.
+
+**Kursiokai:**
+
+| Pavarde    | Vardas     | ND1 | ND2 | ND3 | ND4 | ND5 | Egzaminas |
+| ---------- | ---------- | --- | --- | --- | --- | --- | --------- |
+| Makevicius | Augustinas | 8   | 9   | 10  | 6   | 10  | 9         |
+| Pocius     | Paulius    | 7   | 10  | 8   | 5   | 4   | 6         |
+
+**Rezultatai:**
+
+| Pavarde    | Vardas     | Galutinis-vidurkis | Galutinis-mediana |
+| ---------- | ---------- | ------------------ | ----------------- |
+| Makevicius | Augustinas | 4                  | 8                 |
+| Pocius     | Paulius    | 8                  | 10                |
+
+---
+
 ### [v0.1](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.1) - 2018-02-22
 
-**Pridėta**
+**Pridėta:**
 - Pirminė versija.
 - Išvedami studento duomenys (Vardas, Pavardė, pažymiai, egzamino rezultatas, galutinis rezultatas).
-- Atsitiktinis generavimas
+- Atsitiktinis generavimas.
 - Medianos arba vidurkio skaičiavimas.
+- Dvi realizacijos naudojant `C` masyvus ir `vector` konteinerį.
+
+```
+Iveskite varda: Timas
+Iveskite pavarde: Jackus
+Pasirinkite pazymiu rezultatu ivedima (Ivesti pazymius - 0, Generuoti atsitiktinai - 1): 1
+Iveskite pazymiu skaiciu n: 5
+Pasirinkite skaiciavimo buda (Mediana - 0, Vidurkis - 1): 0
+```
+
+```
+Studento Vardas Pavarde: Timas Jackus
+Studento namu darbu pazymiai: 2 3 6 9 9
+Egzamino rezultatai: 4
+Galutinis balas: 4.80
+```
