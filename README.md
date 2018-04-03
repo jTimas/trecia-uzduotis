@@ -11,6 +11,14 @@
 
 ## Versijų istorija
 
+###  [v0.4](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.4) - 2018-03-13
+
+**Pridėta:**
+- Pridėtas failų generavimas su `10, 100, 1000, 10000, 100000` įrašais.
+- Studentų rūšiavimas į dvi kategorijas (Vargšiukai < 5.0 galutinis balas, Kietiakai >= 5.0 galutinis balas).
+- Laiko matavimas su visais keturiais failais.
+
+---
 
 ###  [v0.3](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.3) - 2018-03-01
 
