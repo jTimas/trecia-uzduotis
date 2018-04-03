@@ -11,6 +11,23 @@
 
 ## Versijų istorija
 
+###  [v0.5](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.5) - 2018-03-13
+
+**Pridėta:**
+- Pridėti konteineriai: `list` ir `deque`.
+- Programos veikimo laiko matavimas priklausomai nuo naudojamo konteinerio.
+
+**Rezultatai:**
+
+| Vector | List  | Deque |
+|:------:|:-----:|:-----:|
+| 2.42s  | 2.21s | 2.67s |
+
+**Išvada:**
+Greičiausiai programa veikia naudojant `list` konteinerį.
+
+---
+
 ###  [v0.4](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.4) - 2018-03-13
 
 **Pridėta:**
