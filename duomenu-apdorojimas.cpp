@@ -26,6 +26,11 @@ int main() {
   if(!isFailo) {
     ivedimas();
   } else {
+	Generuoti(10);
+	Generuoti(100);
+	Generuoti(1000);
+	Generuoti(10000);
+	Generuoti(100000);
     duomenysIsFailoVector();
     duomenysIsFailoList();
     duomenysIsFailoDeque();
