@@ -19,12 +19,14 @@
 - Rūšiavimas pagal vardus ir pavardes.
 
 **Kursiokai:**
+
 | Pavarde    | Vardas     | ND1 | ND2 | ND3 | ND4 | ND5 | Egzaminas |
 | ---------- | ---------- | --- | --- | --- | --- | --- | --------- |
 | Makevicius | Augustinas | 8   | 9   | 10  | 6   | 10  | 9         |
 | Pocius     | Paulius    | 7   | 10  | 8   | 5   | 4   | 6         |
 
 **Rezultatai:**
+
 | Pavarde    | Vardas     | Galutinis-vidurkis | Galutinis-mediana |
 | ---------- | ---------- | ------------------ | ----------------- |
 | Makevicius | Augustinas | 4                  | 8                 |
