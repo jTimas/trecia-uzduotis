@@ -39,3 +39,18 @@
 - Išvedami studento duomenys (Vardas, Pavardė, pažymiai, egzamino rezultatas, galutinis rezultatas).
 - Atsitiktinis generavimas.
 - Medianos arba vidurkio skaičiavimas.
+
+```
+Iveskite varda: Timas
+Iveskite pavarde: Jackus
+Pasirinkite pazymiu rezultatu ivedima (Ivesti pazymius - 0, Generuoti atsitiktinai - 1): 1
+Iveskite pazymiu skaiciu n: 5
+Pasirinkite skaiciavimo buda (Mediana - 0, Vidurkis - 1): 0
+```
+
+```
+Studento Vardas Pavarde: Timas Jackus
+Studento namu darbu pazymiai: 2 3 6 9 9
+Egzamino rezultatai: 4
+Galutinis balas: 4.80
+```
