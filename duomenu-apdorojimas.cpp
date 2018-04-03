@@ -29,9 +29,11 @@ int main() {
   if(!isFailo) {
     ivedimas();
   } else {
-    for(int i = 1; i <= 5; i++) {
-      Generuoti(ceil(pow(10.0, i)));
-    }
+	  Generuoti(10);
+	  Generuoti(100);
+	  Generuoti(1000);
+	  Generuoti(10000);
+	  Generuoti(100000);
     duomenysIsFailoVector();
     duomenysIsFailoVector1Strategija();
     duomenysIsFailoVector2Strategija();
