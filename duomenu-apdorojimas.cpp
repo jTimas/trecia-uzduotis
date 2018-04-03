@@ -1,11 +1,11 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <iomanip>
 #include <string>
 #include <vector>
 #include <chrono>
 #include <algorithm>
-#include <iterator>
 #include <random>
 #include <deque>
 #include <list>
@@ -13,6 +13,7 @@
 #include "includes/studentasIsFailo.h"
 #include "includes/randPazymys.cpp"
 #include "includes/pazymiuIvedimas.cpp"
+#include "includes/intToString.cpp"
 #include "includes/failuGeneravimas.cpp"
 #include "includes/duomenysIsFailo.cpp"
 
@@ -28,6 +29,9 @@ int main() {
   if(!isFailo) {
     ivedimas();
   } else {
+    for(int i = 1; i <= 5; i++) {
+      Generuoti(ceil(pow(10.0, i)));
+    }
     duomenysIsFailoVector();
     duomenysIsFailoVector1Strategija();
     duomenysIsFailoVector2Strategija();
