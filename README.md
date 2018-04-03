@@ -11,6 +11,17 @@
 
 ## Versijų istorija
 
+
+###  [v0.3](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.3) - 2018-03-01
+
+**Pridėta:**
+- Pradėtos naudoti struktūros.
+- Funkcijos perkeltos į `.cpp`.
+- Struktūros ir duomenų tipai perkelti į headerius `.h`.
+- Pradėtas naudotis išimčių valdymas (angl. *Exception Handling*)
+
+---
+
 ### [v0.2](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.2) - 2018-02-27
 
 **Pridėta:**
@@ -32,6 +43,8 @@
 | Makevicius | Augustinas | 4                  | 8                 |
 | Pocius     | Paulius    | 8                  | 10                |
 
+---
+
 ### [v0.1](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.1) - 2018-02-22
 
 **Pridėta:**
@@ -39,6 +52,7 @@
 - Išvedami studento duomenys (Vardas, Pavardė, pažymiai, egzamino rezultatas, galutinis rezultatas).
 - Atsitiktinis generavimas.
 - Medianos arba vidurkio skaičiavimas.
+- Dvi realizacijos naudojant `C` masyvus ir `vector` konteinerį.
 
 ```
 Iveskite varda: Timas
