@@ -1,3 +1,4 @@
+// Struktūros įvedime
 struct Studentas {
   std::string
     vardas,
@@ -10,4 +11,13 @@ struct Studentas {
     gal_balas;
   std::vector
     <int> namu_darbai;
+};
+// Struktūros faile
+struct StudentasF {
+  std::string
+    vardas,
+    pavarde;
+  double
+    vidurkis = 0,
+    mediana;
 };

@@ -1,5 +1,3 @@
-bool pagalVarda(const StudentasF& x, const StudentasF& y) { return x.vardas < y.vardas; }
-bool jeiVargsiukas(const StudentasF& item) { return item.vidurkis < 6; }
 // Vektoriai
 void duomenysIsFailoVector() { // 0 - Vector, 1 - List, 2 - deque
   auto start = std::chrono::high_resolution_clock::now();

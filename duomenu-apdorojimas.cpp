@@ -10,21 +10,21 @@
 #include <deque>
 #include <list>
 #include "includes/studentas.h"
-#include "includes/studentasIsFailo.h"
+#include "includes/palyginimai.h"
 #include "includes/randPazymys.cpp"
 #include "includes/pazymiuIvedimas.cpp"
 #include "includes/failuGeneravimas.cpp"
 #include "includes/duomenysIsFailo.cpp"
 
 int main() {
-  std::vector<int> namu_darbai;
-  std::string vardas, pavarde;
-  int egz;
   bool isFailo;
-  double vidurkis = 0;
-  double mediana;
   std::cout << "Ivesti duomenis - 0, skaityti is failo - 1: ";
-  std::cin >> isFailo;
+  while(!(std::cin >> isFailo)){
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      std::cout << "Ivesti duomenis - 0, skaityti is failo - 1: ";
+  }
+  // std::cin >> isFailo;
   if(!isFailo) {
     ivedimas();
   } else {

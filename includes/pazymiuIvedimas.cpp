@@ -1,7 +1,8 @@
 void ivedimas() {
   std::vector<int> namu_darbai;
   std::string vardas, pavarde;
-  int egz, ivestis, ifRandom;
+  int egz;
+  bool ivestis, ifRandom;
   double vidurkis = 0;
   double mediana;
   Studentas student;
@@ -10,30 +11,48 @@ void ivedimas() {
   std::cout << "Iveskite Pavarde: ";
   std::cin >> student.pavarde;
   std::cout << "Pasirinkite pazymiu rezultatu ivedima (Ivesti pazymius - 0, Generuoti atsitiktinai - 1): ";
-  std::cin >> ifRandom;
+  while(!(std::cin >> ifRandom)){
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      std::cout << "[KLAIDA!] Pasirinkite pazymiu rezultatu ivedima (Ivesti pazymius - 0, Generuoti atsitiktinai - 1): ";
+  }
   if(ifRandom == 0) {
     std::cout << "Iveskite egzamino rezultata: ";
-    std::cin >> egz;
+    while(!(std::cin >> egz) || egz <= 0 || egz > 10 ){
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "[KLAIDA!] Iveskite egzamino rezultata: ";
+    }
   } else {
     egz = randPazymys();
   }
   if(ifRandom == 0) {
     std::cout << "Iveskite pazymius, jei norite nutraukti ivedima irasykite -1: ";
     int input;
-    while (std::cin >> input) {
-      if(input < 0) break;
-      namu_darbai.push_back(input);
+    while(!(std::cin >> input)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "[KLAIDA!] Iveskite pazymius, jei norite nutraukti ivedima irasykite -1: ";
+        namu_darbai.push_back(input);
     }
   }
   else {
     int n;
     std::cout << "Iveskite pazymiu skaiciu n: ";
-    std::cin >> n;
+    while(!(std::cin >> n)){
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "[KLAIDA!] Iveskite pazymiu skaiciu n: ";
+    }
     for (int i = 0; i < n; i++)
       namu_darbai.push_back(randPazymys());
   }
   std::cout << "Pasirinkite skaiciavimo buda (Mediana - 0, Vidurkis - 1): ";
-  std::cin >> ivestis;
+  while(!(std::cin >> ivestis)) {
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      std::cout << "[KLAIDA!] Pasirinkite skaiciavimo buda (Mediana - 0, Vidurkis - 1): ";
+  }
   std::cout << "Studento Vardas Pavarde: " << student.vardas << " " << pavarde << std::endl;
   std::sort(namu_darbai.begin(), namu_darbai.end());
   std::cout << "Studento namu darbu pazymiai: ";
