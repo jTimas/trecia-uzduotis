@@ -1,5 +1,15 @@
 # Duomenų apdorojimas
 
+## Vertinimas
+
+Trukumu nera.
+
+Privalumai:
+
+- Makefile
+- Ir siaip kodo stilius unikalus bet geras.
+
+
 ## Naudojimosi instrukcija (Linux)
 
 Atsidaryti terminale:
