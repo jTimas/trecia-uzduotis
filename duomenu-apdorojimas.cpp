@@ -22,7 +22,7 @@ int main() {
   while(!(std::cin >> isFailo)){
       std::cin.clear();
       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-      std::cout << "Ivesti duomenis - 0, skaityti is failo - 1: ";
+      std::cout << "[KLAIDA!] Ivesti duomenis - 0, skaityti is failo - 1: ";
   }
   // std::cin >> isFailo;
   if(!isFailo) {
