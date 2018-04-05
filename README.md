@@ -1,5 +1,26 @@
 # Duomenų apdorojimas
 
+## Naudojimosi instrukcija (Linux)
+
+Atsidaryti terminale:
+```
+$ make
+g++ -c -w duomenu-apdorojimas.cpp -o duomenu-apdorojimas.o
+g++ duomenu-apdorojimas.o -o run
+./run
+Ivesti duomenis - 0, skaityti is failo - 1:
+```
+
+### Windows
+
+Instaliuoti `make` Windows operacinėje sistemoje: http://gnuwin32.sourceforge.net/packages/make.htm
+
+``` 
+C:\...\>make
+C:\...\>run.exe
+Ivesti duomenis - 0, skaityti is failo - 1:
+```
+
 ## Programos tikslas
 
 **Programa skaičiuoja galutinį studento balą ir atspausdinami visi duomenys:**
@@ -10,6 +31,28 @@
 - Galima įvesti namų darbų ir egzaminų rezultatus arba generuoti atsitiktinai.
 
 ## Versijų istorija
+
+###  [v1.0](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v1.0.1) - 2018-03-26
+
+**Pridėta:**
+- 1 strategija: Bendro studentai konteinerio (vector, list ir deque tipų) skaidymas (rūšiavimas) panaudojant du naujus konteinerius: "vargšiukų" ir "kietiakų". Tokiu būdu tas pats studentas yra dvejuose konteineriuose: studentai ir (vargšiukai arba kietiakai). Nesunku pastebėti, kad tokia strategija yra neefektyvi užimamos atminties atžvilgiu, tačiau kaip dėl spartos priklausomai nuo konteinerio tipo?
+
+- 2 strategija: Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerią: "vargšiukai". Tokiu būdu, jei studentas yra vargšiukas, jį turime įkelti į "vargšiukų" konteinerį ir ištrinti ir bendro studentai konteinerio. Tokiu būdu, studentai konteineryje liks vien tik kietiakai. Atminties atveju tai efektyviau, tačiau dažni trynimai gali būti "skausmingi", ypač tam tikro tipo konteineriams.
+
+Išmatuoti laikai
+
+**Rezultatai:**
+
+| Strategijos     | Vector | List  | Deque |
+|:---------------:|:------:|:-----:|:-----:|
+| Mano strategija | 2.34s  | 2.52s | 2.47s |
+| 1 Strategija    | 3.02s  | 2.71s | 3.25s |
+| 2 Strategija    | 2.43s  | 2.50s | 2.47s |
+
+**Išvada:**
+Greičiausiai programa veikia mano strategija naudojant `vector` konteinerį.
+
+---
 
 ###  [v0.5](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.5) - 2018-03-13
 
