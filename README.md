@@ -80,7 +80,7 @@ Greičiausiai programa veikia naudojant `list` konteinerį.
 
 ---
 
-###  [v0.3](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.3) - 2018-03-01
+###  [v0.3](https://github.com/jTimas/duomenu-apdorojimas/releases/tag/v0.3.1) - 2018-03-01
 
 **Pridėta:**
 - Pradėtos naudoti struktūros.
