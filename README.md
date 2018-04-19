@@ -1,4 +1,23 @@
-# Duomenų apdorojimas
+# Trečia užduotis (Duomenų apdorojimas OOP)
+
+Palyginimas naudojas 2 užduoties `struct`'uras ir 3 užduoties `class`'es.
+
+| Failo dydis (eilutėm) | Struct | Class  | Strategija   |
+|-----------------------|--------|--------|--------------|
+|10                     |0.00224s|0.00441s| 1 strategija |
+|100                    |0.00452s|0.00833s| 1 strategija |
+|1000                   |0.03539s|0.04545s| 1 strategija |
+|10000                  |0.25717s|0.41783s| 1 strategija |
+|100000                 |2.76347s|4.71138s| 1 strategija |
+|10                     |0.00528s|0.00465s| 2 strategija |
+|100                    |0.00743s|0.00769s| 2 strategija |
+|1000                   |0.02960s|0.03613s| 2 strategija |
+|10000                  |0.22618s|0.29985s| 2 strategija |
+|100000                 |2.29404s|3.18264s| 2 strategija |
+
+Išvada: 2 užduoties realizacija spartesnė naudojant `struct`'uras
+
+# Duomenų apdorojimas (2 užduotis)
 
 ## Vertinimas
 
