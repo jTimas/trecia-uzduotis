@@ -1,3 +1,5 @@
+#include <random>
+
 int randPazymys() {
     std::random_device rd;
     std::mt19937 gen(rd());

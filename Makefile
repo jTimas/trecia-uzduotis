@@ -4,7 +4,7 @@ CC_FLAGS = -w
 
 # File names
 EXEC = run
-SOURCES = duomenu-apdorojimas.cpp
+SOURCES = main.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 # Main target
