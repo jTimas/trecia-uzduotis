@@ -60,5 +60,3 @@ bool Studentas::operator< (const Studentas& b) {
 bool Studentas::operator> (const Studentas& b) {
   return vardas_ > b.vardas_;
 }
-
-bool jeiVargsiukas(Studentas& x) { return x.getVidurkis() < 6; }
