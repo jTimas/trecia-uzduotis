@@ -40,4 +40,18 @@ void printToFile(std::vector<Studentas> &kietiakai, std::vector<Studentas> &varg
   fout << std::left << std::setw(15) << "Pavarde" << std::setw(15) << "Vardas" << std::setw(20) << "Galutinis-vidurkis" << std::setw(20) << "Galutinis-mediana" << std::endl;
   for(auto &v: vargsiukai)
     fout << v;
+  fout.close();
+}
+
+void printToFile(std::vector<Studentas> &kietiakai, std::vector<Studentas>::iterator bound, std::string file) {
+  std::ofstream fout(file);
+  fout << "Kietiakai:" << std::endl;
+  fout << std::left << std::setw(15) << "Pavarde" << std::setw(15) << "Vardas" << std::setw(20) << "Galutinis-vidurkis" << std::setw(20) << "Galutinis-mediana" << std::endl;
+  for (std::vector<Studentas>::iterator it=bound; it!=kietiakai.end(); ++it)
+    fout << *it;
+  fout << "Vargsiukai:" << std::endl;
+  fout << std::left << std::setw(15) << "Pavarde" << std::setw(15) << "Vardas" << std::setw(20) << "Galutinis-vidurkis" << std::setw(20) << "Galutinis-mediana" << std::endl;
+  for (std::vector<Studentas>::iterator it=kietiakai.begin(); it != bound; ++it)
+    fout << *it;
+  fout.close();
 }

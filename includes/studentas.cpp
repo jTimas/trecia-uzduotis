@@ -41,9 +41,24 @@ void Studentas::mediana() {
 }
 
 std::ostream& operator<<(std::ostream& out, const Studentas& a) {
-    out << std::left << std::setprecision(2) << std::fixed << std::setw(15) << a.pavarde_ << std::setw(15) << a.vardas_ << std::setw(20) << a.vidurkis_ << std::setw(20) << a.mediana_ << std::endl;
-    return out;
+  out << std::left << std::setprecision(2) << std::fixed << std::setw(15) << a.pavarde_ << std::setw(15) << a.vardas_ << std::setw(20) << a.vidurkis_ << std::setw(20) << a.mediana_ << std::endl;
+  return out;
 }
 
-bool operator< (Studentas& a, Studentas& b) { return a.vardas() < b.vardas(); }
+bool Studentas::operator==(const Studentas &b) {
+  return vardas_ == b.vardas_ && pavarde_ == b.pavarde_;
+}
+
+bool Studentas::operator!=(const Studentas &b) {
+  return !operator==(b);
+}
+
+bool Studentas::operator< (const Studentas& b) {
+  return vardas_ < b.vardas_;
+}
+
+bool Studentas::operator> (const Studentas& b) {
+  return vardas_ > b.vardas_;
+}
+
 bool jeiVargsiukas(Studentas& x) { return x.getVidurkis() < 6; }

@@ -8,6 +8,7 @@ int main() {
     Generuoti(i);
     pirmaStrategija(std::to_string(i));
     antraStrategija(std::to_string(i));
+    stablePartition(std::to_string(i));
   }
   return 0;
 }

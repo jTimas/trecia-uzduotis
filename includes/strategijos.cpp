@@ -35,3 +35,16 @@ void antraStrategija (std::string file) {
   std::cout << "Duomenu kiekis: " << std::setw(6) << file << " [Vector 2 strategija] Time taken: " << elapsed.count() << " s\n";
   stud.clear();
 }
+
+void stablePartition (std::string file) {
+  auto start = std::chrono::high_resolution_clock::now();
+  std::vector<Studentas> stud;
+  readFromFile(stud, file + ".txt");
+  std::sort(stud.begin(), stud.end());
+  std::vector<Studentas>::iterator bound = stable_partition(stud.begin(), stud.end(), jeiVargsiukas);
+  printToFile(stud, bound, file + "-rezultatai.txt");
+  auto finish = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> elapsed = finish - start;
+  std::cout << "Duomenu kiekis: " << std::setw(6) << file << " [stable_partition()] Time taken: " << elapsed.count() << " s\n";
+  stud.clear();
+}

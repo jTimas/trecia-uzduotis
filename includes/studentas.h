@@ -25,4 +25,8 @@ class Studentas {
       inline std::string vardas() const { return vardas_; }
       inline std::string pavarde() const { return pavarde_; }
       friend std::ostream& operator<<(std::ostream&, const Studentas&);
+      bool operator< (const Studentas& b);
+      bool operator> (const Studentas& b);
+      bool operator== (const Studentas& b);
+      bool operator!= (const Studentas& b);
 };
