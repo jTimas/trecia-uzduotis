@@ -13,13 +13,15 @@ class Studentas {
   public:
       /// Inicializuojamas studentas
       Studentas() : egzaminas_(0) { }
+      Studentas (std::vector<int> namu_darbai) { nd_.assign(namu_darbai.begin(), namu_darbai.end()); }
+      Studentas (std::string fName, std::string lName) { vardas_ = fName; pavarde_ = lName; }
       /// Nustatomas studento vardas.
       void setfName(std::string);
       /// Nustatoma studento pavardė.
       void setlName(std::string);
       /// Priskiriamas egzamino pažymis
       void setEgz(double);
-      /// Priskiriamas namų darbo pažymis
+      /// Priskiriamas namų darbų pažymiai
       void addND(double);
       /// Išrūšiuojami nuo žemiausio iki didžiausio namų darbų pažymio
       void sortND();
@@ -48,6 +50,11 @@ class Studentas {
         @returns double vidurkis_
         */
       inline double getVidurkis() const { return vidurkis_; }
+      /**
+        Gražinama jau išskaičiuota mediana
+        @returns double mediana_
+        */
+      inline double getMediana() const { return mediana_; }
       /**
         Grąžina studento vardą
         @returns std::string vardas_
@@ -83,3 +90,14 @@ class Studentas {
        */
       bool operator!= (const Studentas& b);
 };
+
+// Funkcijų deklaracijos
+bool jeiVargsiukas(Studentas&);
+void Generuoti (int n);
+void readFromFile(std::vector<Studentas>&, std::string);
+void printToFile(std::vector<Studentas>&, std::vector<Studentas> &, std::string);
+void printToFile(std::vector<Studentas>&, std::vector<Studentas>::iterator, std::string);
+void pirmaStrategija(std::string);
+void antraStrategija(std::string);
+void stablePartition(std::string);
+int randPazymys();

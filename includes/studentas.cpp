@@ -1,7 +1,6 @@
 #include <algorithm>
+#include <iomanip>
 #include "studentas.h"
-#include "fileStreams.cpp"
-#include "randPazymys.cpp"
 
 void Studentas::setfName(std::string x) {
    vardas_ = x;
@@ -60,3 +59,5 @@ bool Studentas::operator< (const Studentas& b) {
 bool Studentas::operator> (const Studentas& b) {
   return vardas_ > b.vardas_;
 }
+
+bool jeiVargsiukas(Studentas& x) { return x.getVidurkis() < 6; }

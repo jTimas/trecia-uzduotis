@@ -1,5 +1,7 @@
 #include <fstream>
 #include <iomanip>
+#include <vector>
+#include "studentas.h"
 
 void readFromFile(std::vector<Studentas> &stud, std::string file) {
   std::ifstream fin;

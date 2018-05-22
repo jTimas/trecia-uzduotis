@@ -1,6 +1,4 @@
-#include "includes/studentas.cpp"
-#include "includes/failuGeneravimas.cpp"
-#include "includes/strategijos.cpp"
+#include "includes/studentas.h"
 
 int main() {
   for(int i = 10; i <= 100000; i *= 10)

@@ -1,4 +1,9 @@
 #include <chrono>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iomanip>
+#include "studentas.h"
 
 void pirmaStrategija (std::string file) {
   auto start = std::chrono::high_resolution_clock::now();
