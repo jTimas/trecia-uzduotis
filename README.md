@@ -1,5 +1,14 @@
 # Trečia užduotis (Duomenų apdorojimas OOP)
 
+## Naudojimosi instrukcija
+
+```
+cmake .
+make
+cd bin
+./trecia_uzduotis
+```
+
 ###  [v1.0](https://github.com/jTimas/trecia-uzduotis/releases/tag/v1.0) - 2018-05-22
 
 - Realizuoti **Unit Testai** naudojant `Catch` framework'ą
