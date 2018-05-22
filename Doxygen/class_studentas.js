@@ -1,8 +1,11 @@
 var class_studentas =
 [
     [ "Studentas", "class_studentas.html#ab459e995e8c9b24cdc9aec5b09a66539", null ],
+    [ "Studentas", "class_studentas.html#ab7abdecd2a67e1f6008001d231e46f36", null ],
+    [ "Studentas", "class_studentas.html#a25b678315e8dc56bec0c10e78f2ee976", null ],
     [ "addND", "class_studentas.html#af8d4d5c874bd4c9143f9ad8eb898071c", null ],
     [ "egz", "class_studentas.html#a8462399fa59e5cf39ec208e077dba84f", null ],
+    [ "getMediana", "class_studentas.html#a75eb0996687d5e740b44e28e6e1bfc5f", null ],
     [ "getVidurkis", "class_studentas.html#ac0a7e980225142cb5445f6b0432191b3", null ],
     [ "mediana", "class_studentas.html#a4bf7f18cafd86b91268f8227d92fcc52", null ],
     [ "nd", "class_studentas.html#a7b3162c76a6142ab369173c6034dded8", null ],

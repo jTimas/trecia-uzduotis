@@ -24,7 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Trečia užduotis", "index.html", [
-    [ "Trečia užduotis (Duomenų apdorojimas OOP)", "md__c_1__workspace__objektinis_uzduotys_trecia-uzduotis__r_e_a_d_m_e.html", null ],
+    [ "Trečia užduotis (Duomenų apdorojimas OOP)", "md_includes__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

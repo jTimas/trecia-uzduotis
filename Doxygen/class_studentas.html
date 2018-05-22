@@ -100,6 +100,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#ab459e995e8c9b24cdc9aec5b09a66539">Studentas</a> ()</td></tr>
 <tr class="memdesc:ab459e995e8c9b24cdc9aec5b09a66539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializuojamas studentas. <br /></td></tr>
 <tr class="separator:ab459e995e8c9b24cdc9aec5b09a66539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7abdecd2a67e1f6008001d231e46f36"><td class="memItemLeft" align="right" valign="top"><a id="ab7abdecd2a67e1f6008001d231e46f36"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Studentas</b> (std::vector&lt; int &gt; namu_darbai)</td></tr>
+<tr class="separator:ab7abdecd2a67e1f6008001d231e46f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b678315e8dc56bec0c10e78f2ee976"><td class="memItemLeft" align="right" valign="top"><a id="a25b678315e8dc56bec0c10e78f2ee976"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Studentas</b> (std::string fName, std::string lName)</td></tr>
+<tr class="separator:a25b678315e8dc56bec0c10e78f2ee976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab134f497901be494edd98904c7370ec"><td class="memItemLeft" align="right" valign="top"><a id="aab134f497901be494edd98904c7370ec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#aab134f497901be494edd98904c7370ec">setfName</a> (std::string)</td></tr>
 <tr class="memdesc:aab134f497901be494edd98904c7370ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nustatomas studento vardas. <br /></td></tr>
@@ -114,7 +120,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a07a051acc114e1787c24d43aab465805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8d4d5c874bd4c9143f9ad8eb898071c"><td class="memItemLeft" align="right" valign="top"><a id="af8d4d5c874bd4c9143f9ad8eb898071c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#af8d4d5c874bd4c9143f9ad8eb898071c">addND</a> (double)</td></tr>
-<tr class="memdesc:af8d4d5c874bd4c9143f9ad8eb898071c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Priskiriamas namų darbo pažymis. <br /></td></tr>
+<tr class="memdesc:af8d4d5c874bd4c9143f9ad8eb898071c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Priskiriamas namų darbų pažymiai. <br /></td></tr>
 <tr class="separator:af8d4d5c874bd4c9143f9ad8eb898071c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa83dcefe1a34535114b31da10a540b6b"><td class="memItemLeft" align="right" valign="top"><a id="aa83dcefe1a34535114b31da10a540b6b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#aa83dcefe1a34535114b31da10a540b6b">sortND</a> ()</td></tr>
@@ -130,6 +136,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a8462399fa59e5cf39ec208e077dba84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0a7e980225142cb5445f6b0432191b3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#ac0a7e980225142cb5445f6b0432191b3">getVidurkis</a> () const</td></tr>
 <tr class="separator:ac0a7e980225142cb5445f6b0432191b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75eb0996687d5e740b44e28e6e1bfc5f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#a75eb0996687d5e740b44e28e6e1bfc5f">getMediana</a> () const</td></tr>
+<tr class="separator:a75eb0996687d5e740b44e28e6e1bfc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000a73298cd723400eeea22427bd437b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#a000a73298cd723400eeea22427bd437b">vardas</a> () const</td></tr>
 <tr class="separator:a000a73298cd723400eeea22427bd437b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af80936870cf0e4d66ae5cab31461e8ec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_studentas.html#af80936870cf0e4d66ae5cab31461e8ec">pavarde</a> () const</td></tr>
@@ -172,6 +180,32 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Gražinamas egzamino pažymis </p><dl class="section return"><dt>Returns</dt><dd>double egzaminas_ </dd></dl>
+
+</div>
+</div>
+<a id="a75eb0996687d5e740b44e28e6e1bfc5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75eb0996687d5e740b44e28e6e1bfc5f">&#9670;&nbsp;</a></span>getMediana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Studentas::getMediana </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gražinama jau išskaičiuota mediana </p><dl class="section return"><dt>Returns</dt><dd>double mediana_ </dd></dl>
 
 </div>
 </div>
@@ -430,8 +464,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Workspace/Objektinis/uzduotys/trecia-uzduotis/includes/<a class="el" href="studentas_8h_source.html">studentas.h</a></li>
-<li>C:/Workspace/Objektinis/uzduotys/trecia-uzduotis/includes/studentas.cpp</li>
+<li>includes/<a class="el" href="studentas_8h_source.html">studentas.h</a></li>
+<li>includes/studentas.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
