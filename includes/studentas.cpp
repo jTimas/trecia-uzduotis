@@ -2,11 +2,11 @@
 #include <iomanip>
 #include "studentas.h"
 
-void Zmogus::setfName(std::string x) {
+void Studentas::setfName(std::string x) {
    vardas_ = x;
 }
 
-void Zmogus::setlName(std::string x) {
+void Studentas::setlName(std::string x) {
    pavarde_ = x;
 }
 

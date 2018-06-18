@@ -8,21 +8,14 @@ class Zmogus {
         std::string pavarde_;
     public:
         Zmogus() {}
-        Zmogus (std::string fName, std::string lName) : vardas_{fName}, pavarde_{lName} { }
-        /// Nustatomas studento vardas.
-        void setfName(std::string);
-        /// Nustatoma studento pavardė.
-        void setlName(std::string);
-        /**
-          Grąžina studento vardą
-          @returns std::string vardas_
-         */
-        inline std::string vardas() const { return vardas_; }
-        /**
-          Grąžina studento pavardę
-          @returns std::string pavarde_
-         */
-        inline std::string pavarde() const { return pavarde_; }
+
+        Zmogus(std::string fName, std::string lName) : vardas_{fName}, pavarde_{lName} {}
+
+        virtual void setfName(std::string) = 0;
+        virtual void setlName(std::string) = 0;
+
+        virtual inline std::string vardas() = 0;
+        virtual inline std::string pavarde() = 0;
 };
 
 class Studentas : public Zmogus {
@@ -36,6 +29,21 @@ public:
     Studentas() : egzaminas_(0) { }
     Studentas (std::vector<int> namu_darbai) { nd_.assign(namu_darbai.begin(), namu_darbai.end()); }
     Studentas (const std::string &fName, const std::string &lName) : Zmogus{fName, lName} { }
+
+    /// Nustatomas studento vardas.
+    void setfName(std::string);
+    /// Nustatoma studento pavardė.
+    void setlName(std::string);
+    /**
+      Grąžina studento vardą
+      @returns std::string vardas_
+     */
+    inline std::string vardas() { return vardas_; };
+    /**
+      Grąžina studento pavardę
+      @returns std::string pavarde_
+     */
+    inline std::string pavarde() { return pavarde_; };
     /// Priskiriamas egzamino pažymis
     void setEgz(double);
     /// Priskiriamas namų darbų pažymiai
